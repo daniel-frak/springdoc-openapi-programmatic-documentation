@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.danielfrak.code.programmaticdocs.ModelDocumentation
