@@ -4,7 +4,7 @@
 
     <groupId>com.danielfrak.code</groupId>
     <artifactId>springdoc-openapi-programmatic-documentation</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
 
     <name>Springdoc OpenAPI Programmatic Documenation</name>
     <description>Allows for defining OpenAPI documentation using code</description>
@@ -79,7 +79,7 @@
             scm:git:git@github.com:daniel-frak/Springdoc-OpenAPI-Programmatic-Documentation.git
         </developerConnection>
         <url>https://github.com/daniel-frak/Springdoc-OpenAPI-Programmatic-Documentation</url>
-        <tag>springdoc-openapi-programmatic-documentation-1.0.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
