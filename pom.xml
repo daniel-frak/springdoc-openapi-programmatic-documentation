@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.danielfrak.code</groupId>
     <artifactId>springdoc-openapi-programmatic-documentation</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <name>Springdoc OpenAPI Programmatic Documenation</name>
     <description>Allows for defining OpenAPI documentation using code</description>
@@ -73,7 +71,7 @@
             scm:git:git@github.com:daniel-frak/Springdoc-OpenAPI-Programmatic-Documentation.git
         </developerConnection>
         <url>https://github.com/daniel-frak/Springdoc-OpenAPI-Programmatic-Documentation</url>
-        <tag>HEAD</tag>
+        <tag>springdoc-openapi-programmatic-documentation-1.0</tag>
     </scm>
 
     <distributionManagement>
@@ -125,6 +123,13 @@
                 <version>${maven-surefire-plugin.version}</version>
             </plugin>
 
+            <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.8.2</version>
+            </plugin>
+
             <!-- Optional: ensure the manifest contains artifact version information: -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -160,7 +165,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9.1</version>
+                <version>3.1.1</version>
                 <executions>
                     <execution>
                         <id>attach-javadoc</id>
