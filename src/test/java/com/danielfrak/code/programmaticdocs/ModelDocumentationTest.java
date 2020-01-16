@@ -1,6 +1,7 @@
 package com.danielfrak.code.programmaticdocs;
 
 import com.danielfrak.code.programmaticdocs.ModelDocumentation.DocumentedModel;
+import com.danielfrak.code.programmaticdocs.dummies.DummyObject;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.v3.core.converter.AnnotatedType;
 import io.swagger.v3.core.converter.ModelConverter;
@@ -25,11 +26,11 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 class ModelDocumentationTest {
 
-    private ModelDocumentation modelDocumentation;
-
     @Mock
     private ModelConverterContext modelConverterContext;
 
+    private ModelDocumentation modelDocumentation;
+    
     @BeforeEach
     void setUp() {
         modelDocumentation = new ModelDocumentation();
@@ -98,8 +99,5 @@ class ModelDocumentationTest {
 
         assertEquals(existingDescriptionValue, schema.getDescription());
         assertEquals(exampleValue, schema.getExample());
-    }
-
-    private static class DummyObject {
     }
 }

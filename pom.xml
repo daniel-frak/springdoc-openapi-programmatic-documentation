@@ -6,7 +6,7 @@
     <artifactId>springdoc-openapi-programmatic-documentation</artifactId>
     <version>1.0.2-SNAPSHOT</version>
 
-    <name>Springdoc OpenAPI Programmatic Documenation</name>
+    <name>Springdoc OpenAPI Programmatic Documentation</name>
     <description>Allows for defining OpenAPI documentation using code</description>
     <url>https://www.code.danielfrak.com</url>
 

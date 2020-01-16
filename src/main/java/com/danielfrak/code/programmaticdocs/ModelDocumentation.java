@@ -31,17 +31,17 @@ import java.util.Map;
 @Component
 public class ModelDocumentation implements ModelConverter {
 
-    private Map<Class<?>, Class<?>> classMap = new HashMap<>();
+    private Map<Class<?>, Class<?>> implementationMap = new HashMap<>();
     private Map<Class<?>, Schema<?>> schemaMap = new HashMap<>();
 
     public ModelDocumentation add(DocumentedModel model) {
-        if(model.sourceClass == null) {
+        if (model.sourceClass == null) {
             throw new IllegalArgumentException("Source class cannot be NULL");
         }
-        if(model.implementation != null) {
-            classMap.put(model.sourceClass, model.implementation);
+        if (model.implementation != null) {
+            implementationMap.put(model.sourceClass, model.implementation);
         }
-        if(model.schema != null) {
+        if (model.schema != null) {
             schemaMap.put(model.sourceClass, model.schema);
         }
         return this;
@@ -51,8 +51,8 @@ public class ModelDocumentation implements ModelConverter {
     public Schema<?> resolve(AnnotatedType type, ModelConverterContext context, Iterator<ModelConverter> chain) {
         Class<?> typeClass = TypeFactory.rawClass(type.getType());
 
-        if (classMap.containsKey(typeClass)) {
-            type.setType(classMap.get(typeClass));
+        if (implementationMap.containsKey(typeClass)) {
+            type.setType(implementationMap.get(typeClass));
         }
 
         try {
@@ -77,7 +77,7 @@ public class ModelDocumentation implements ModelConverter {
 
         Schema<?> schema = schemaMap.get(typeName);
 
-        for(Field field: schema.getClass().getDeclaredFields()) {
+        for (Field field : schema.getClass().getDeclaredFields()) {
             field.setAccessible(true);
 
             if (isBlank(field.get(model))) {
