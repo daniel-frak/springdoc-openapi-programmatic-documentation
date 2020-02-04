@@ -74,11 +74,11 @@
     </dependencies>
 
     <scm>
-        <connection>scm:git:git://github.com/daniel-frak/Springdoc-OpenAPI-Programmatic-Documentation</connection>
+        <connection>scm:git:git://github.com/daniel-frak/springdoc-openapi-programmatic-documentation</connection>
         <developerConnection>
-            scm:git:git@github.com:daniel-frak/Springdoc-OpenAPI-Programmatic-Documentation.git
+            scm:git:git@github.com:daniel-frak/springdoc-openapi-programmatic-documentation.git
         </developerConnection>
-        <url>https://github.com/daniel-frak/Springdoc-OpenAPI-Programmatic-Documentation</url>
+        <url>https://github.com/daniel-frak/springdoc-openapi-programmatic-documentation</url>
         <tag>HEAD</tag>
     </scm>
 
